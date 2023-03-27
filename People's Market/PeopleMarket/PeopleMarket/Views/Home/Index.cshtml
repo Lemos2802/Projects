@@ -1,0 +1,51 @@
+﻿@model Feira
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var basePath = Context.Request.PathBase;
+}
+
+<div class="text-center">
+    <span class="fs-2">Welcome to People’s Market</span>
+</div>
+
+<div class="text-start">
+    <span class="fs-3">Feiras Recomendadas</span>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+        <div class="card" style="background-color: #8EA7C4" type="button">
+            <img src= "~/Images/braga_1.png" height="250" alt="Image did not render"/>
+            <div class="card-body">
+                <a class="d-flex justify-content-center text-dark h4" style="text-decoration:none" asp-area="" asp-controller="Home" asp-action="Feira">Feira de Braga @Html.DisplayFor(model => model.Id)</a>
+                <p class="card-text"><i class="bi bi-calendar-week"></i> 12/12/2022 @Html.DisplayFor(model => model.data)</p>
+                <p class="card-text"><i class="bi bi-tag"></i> @Html.DisplayFor(model => model.nBarracas) 1 barracas nesta feira </p>
+                <p class="card-text"><i class="bi bi-emoji-smile"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star"></i>@Html.DisplayFor(model => model.classificacao)</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card" style="background-color: #8EA7C4" type="button">
+            <img src="~/Images/leiria_1.png" height="250" alt="Image did not render"/>
+            <div class="card-body">
+                <h4 class="card-title  text-center">Feira de Leiria</h4>
+                <p class="card-text"><i class="bi bi-calendar-week"></i> 16/12/2022</p>
+                <p class="card-text"><i class="bi bi-tag"></i> 0 barracas nesta feira</p>
+                <p class="card-text"><i class="bi bi-emoji-frown"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i></p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card" style="background-color: #8EA7C4" type="button">
+            <img src="~/Images/porto_1.png" height="250" alt="Image did not render"/>
+            <div class="card-body">
+                <h4 class="card-title text-center">Feira do Porto</h4>
+                <p class="card-text"><i class="bi bi-calendar-week"></i> 21/12/2022</p>
+                <p class="card-text"><i class="bi bi-tag"></i> 0 barracas nesta feira</p>
+                <p class="card-text"><i class="bi bi-emoji-smile"></i>  <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star"></i></p>
+            </div>
+        </div>
+    </div>
+</div>

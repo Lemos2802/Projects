@@ -1,0 +1,28 @@
+.container-register{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 78vh;
+}
+
+.w-70{
+  width: 70%;
+}
+
+.painelesq {
+  background-color: #DADFEA;
+  color: #3359A2;
+}
+
+.logo {
+  text-align: left;
+  font-family: Major Mono Display;
+}
+
+.cinza {
+  color: #4D5970;
+}
+
+.paineldir {
+  background-color: #8EA7C4;
+}

@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Major Mono Display';
+  src: url('/font/MajorMonoDisplay-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Miriam Libre';
+  src: url('/font/MiriamLibre-Regular.ttf') format('truetype');
+}

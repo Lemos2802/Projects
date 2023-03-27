@@ -1,0 +1,91 @@
+@model PeopleMarket.Models.Produto
+
+@{
+    ViewData["Title"] = "Barracas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var basePath = Context.Request.PathBase;
+}
+
+<div class="modal fade" id="infoFeirante" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#3C3C3C;">
+                <h1 class="modal-title fs-5 text-white"  id="infoFeirante">Informações do Feirante</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="background-color:#3C3C3C;"> 
+                <fieldset disabled>
+                    <div class="d-flex form-group p-4 text-white">
+                        <span class="d-flex justify-content-center w-25">Nome: </span>
+                        <input type="text" class="form-control" placeholder="Acácia Silva">
+                    </div>
+                    <div class="d-flex form-group p-4 text-white">
+                        <span class="d-flex justify-content-center w-25">Telemóvel: </span>
+                        <input type="text" class="form-control" placeholder="969655123">
+                    </div>
+                    <div class="d-flex form-group p-4 text-white">
+                        <span class="d-flex justify-content-center w-25">E-mail: </span>
+                        <input type="text" class="form-control" placeholder="acaciasilva50@sapo.pt">
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="comentario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#3C3C3C;">
+                <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Novo Comentário</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="background-color:#3C3C3C;">
+                <form>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label text-white">Avaliação:</label>
+                        <i class="bi bi-star text-white"></i> <i class="bi bi-star text-white"></i> <i class="bi bi-star text-white"></i> <i class="bi bi-star text-white"></i> <i class="bi bi-star text-white"></i>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label text-white">Comentário:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer" style="background-color:#3C3C3C;">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="col-md-3 float-md-end ms-md-5 d-flex justify-content-end">
+        <button type="button" class="btn bi bi-person-circle" style="font-size: 10rem" data-bs-toggle="modal" data-bs-target="#infoFeirante"></button>
+    </div>
+    <span  class="miriam fs-2">Barraca da Dona Acácia</span>
+    <div class="row row-cols-1 row-cols-md-2 g-4" width="70">
+        <div class="col">
+            <div class="card w-75" type="button" style="background-color: #8EA7C4">
+                <img src="~/Images/casaco.png" class="card-img-top" alt="Image did not render">
+                <div class="card-body">
+                    <a class="d-flex justify-content-center text-dark h5" style="text-decoration:none" asp-area="" asp-controller="Home" asp-action="Produto">Casaco Camurça Masculino</a>
+                    <p class="card-text">23.47€</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div  class="w-75 mt-5">
+        <span class="miriam fs-2">Comentários:</span>
+            <div class="col-md-3 float-md-end ms-md-5 d-flex justify-content-end">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#comentario">Deixe o seu Comentário</button>
+            </div>
+        <div class="ms-5">
+            <span class="fs-3"> Bruno Marques <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star"></i></span>
+            <p> Primeira vez que realizo uma compra  nesta barraca e estou muito supreendido pela qualidade dos produtos. </p>
+        </div>
+    </div>
+</div>

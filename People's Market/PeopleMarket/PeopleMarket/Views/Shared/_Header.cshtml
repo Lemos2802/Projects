@@ -1,0 +1,50 @@
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 w-100 background-header">
+        <div class="d-flex flex-row w-100 container">
+            <div class="">
+                <a class="nav-link text-white major" asp-area="" asp-controller="Home" asp-action="Index">People's Market</a>
+            </div>
+            <div class="d-flex DocSearch-Form input-icons">
+                <i class="p-3 d-flex justify-content-start bi bi-search "></i>
+                <input class="input-field rounded-pill" placeholder="O que está à procura?" maxlength="32" asp-area="" asp-controller="Home" asp-action=""></input>
+            </div> 
+
+            <div class="d-flex justify-content-end">
+                <div class=" d-flex justify-content-end">
+                    <div class="nav-item">
+                        <button class="btn text-white" type="button" data-bs-toggle="collapse" data-bs-target="#notificacoes" aria-expanded="false" aria-controls="notificacoes"><i class="bi bi-envelope"></i></button>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="notificacoes">
+                                    <div class="card card-body">Sem notificações.</div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="nav-item">
+                        <button class="btn text-white" type="button" data-bs-toggle="collapse" data-bs-target="#cesto" aria-expanded="false" aria-controls="cesto"><i class="bi bi-cart3"></i></button>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="cesto">
+                                    <div class="card card-body">Cesto vazio.</div>
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Cliente" asp-action="Checkout">Fazer Checkout</a>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="nav-item">
+                        <button class="btn text-white" type="button" data-bs-toggle="collapse" data-bs-target="#boneco" aria-expanded="false" aria-controls="boneco"><i class="bi bi-person-circle"></i></button>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="boneco">
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Cliente" asp-action="Perfil">Ver Perfil</a>
+                                    <a class="nav-link text-white" asp-area="" asp-controller="Auth" asp-action="Logout">Logout</a>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,39 @@
+@model PerfilViewModel
+
+<div class="container">
+    <span  class="miriam fs-2">Dados Pessoais</span>
+    <div  class="w-60 cinza-claro mb-3">
+        <form class="sign-in-form" asp-controller="Auth" asp-action="Register" method="post">
+            <div class="d-flex form-group p-4 text-white">
+                <span class="d-flex justify-content-center w-25">Nome: </span>
+                <input class="form-control rounded-pill"  asp-for="Username" required=True/>
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="d-flex form-group p-4 text-white">
+                <span class="d-flex justify-content-center w-25">E-mail: </span>
+                <input class="form-control rounded-pill" asp-for="Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="d-flex form-group p-4 text-white">
+                <span class="d-flex justify-content-center w-25">Telemóvel: </span>
+                <input class="form-control rounded-pill" asp-for="PhoneNumber" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="p-4 rounded-pill d-flex justify-content-end"><button type="submit" value="Save" class="btn btn-success">Guardar</div>
+        </form>
+    </div>
+    <span  class="miriam fs-2">Dados de Entrega</span>
+    <div  class="w-25 rounded" style="background-color: #8EA7C4">
+        <div class="p-2">
+            <p>- Manuel Joaquim Silva Antunes </p>
+            <p>- Praça da alegria, nº 34 </p>
+            <p>- 4976-234 </p>
+            <p>- T: 9649094825 </p>
+            <p><i class="bi bi-plus-circle-fill"></i> Editar Dados de Entrega </p>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

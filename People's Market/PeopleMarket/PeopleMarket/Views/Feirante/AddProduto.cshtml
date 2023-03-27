@@ -1,0 +1,87 @@
+@model PeopleMarket.Models.Barraca
+@* Produtos *@
+
+@{
+    ViewData["Title"] = "Barracas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var basePath = Context.Request.PathBase;
+}
+
+<div class="modal fade" id="addproduto" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#3C3C3C;">
+                <h1 class="modal-title fs-5 text-white">Adicionar Produto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="background-color:#3C3C3C;">
+                <form>
+                    <div class="d-flex form-group p-4 text-white">
+                        <span class="d-flex justify-content-center w-25">Nome: </span>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="d-flex form-group p-4 text-white">
+                        <span class="d-flex justify-content-center w-25">Descrição: </span>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="d-flex form-group p-4 text-white">
+                        <span class="d-flex justify-content-center w-25">Quantidade: </span>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="d-flex form-group p-4 text-white">
+                        <span class="d-flex justify-content-center w-25">Preço: </span>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="d-flex form-group p-4 text-white">
+                        <span class="d-flex justify-content-center w-25">Adicionar Imagem: </span>
+                        <input type="text" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer d-flex justify-content-center" style="background-color:#3C3C3C;">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <span  class="miriam fs-2">Barraca da Dona Acácia</span>
+    <div class="row row-cols-1 row-cols-md-2 g-4" width="70">
+        <div class="col">
+            <div class="card w-50" type="button" style="background-color: #8EA7C4">
+                <img src="~/Images/casaco.png" class="card-img-top" alt="Image did not render">
+                <div class="card-body">
+                    <h5 class="card-title">Casaco de Camurça Masculino</h5>
+                    <p class="card-text">
+                        Com a aliança da camurça suave, este blazer será o principal da sua toilette de inverno.
+                        - Casaco de camurça suave
+                        - Interior forrado a malha sherpa
+                        - Abertura com 3 botões grandes de fantasia
+                        - 2 bolsos com encaixe na anca à frente, 1 no peito à frente
+                        - Forro acetinado
+                        - Comprimento atrás: cerca de 94 cm</p>
+                    <p class="card-text">Quantidade: 8</p>
+                    <p class="card-text">23.47€</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card w-50" style="background-color: #8EA7C4" type="button">
+                <div class="card-body d-flex justify-content-center mt-5 mb-5">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#addproduto"><i class="bi bi-plus-circle-fill" style="font-size: 10rem; color:#3359A3"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div  class="w-75 mt-5">
+        <span class="miriam fs-2">Comentários:</span>
+        <div class="ms-5">
+            <span class="fs-3"> Bruno Marques <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star"></i></span>
+            <p> Primeira vez que realizo uma compra  nesta barraca e estou muito supreendido pela qualidade dos produtos. </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+# DNS database file for domain example.com
+# It also includes a pointer to the primary server
+# of the smaller.example.com subdomain
+
+@ DEFAULT xadrez.ptg.
+TTL DEFAULT 86400
+
+@ SOASP ns1.xadrez.ptg. TTL
+@ SOAADMIN dns\.admin.xadrez.ptg TTL
+@ SOASERIAL 0 TTL
+@ SOAREFRESH 14400 TTL
+@ SOARETRY 3600 TTL
+@ SOAEXPIRE 604800 TTL
+
+@ NS ns1.xadrez.ptg. TTL
+@ NS ns2.xadrez.ptg. TTL
+@ NS ns3.xadrez.ptg. TTL
+
+tosta.@ NS ns1.tosta.xadrez.ptg.
+tosta.@ NS ns2.tosta.xadrez.ptg.
+tosta.@ NS ns3.tosta.xadrez.ptg.
+
+@ MX mx1.xadrez.ptg TTL 10
+
+ns1 A 10.2.2.11 TTL
+ns2 A 10.1.1.10 TTL
+ns3 A 10.3.3.12 TTL
+ns1.tosta A 10.3.3.13 TTL
+ns2.tosta A 10.1.1.13 TTL
+ns3.tosta A 10.4.4.12 TTL
+mx1 A 10.0.13.13 TTL
+www A 10.0.12.13 TTL 200
+ftp A 10.0.12.13 TTL
+
+
+sp CNAME ns1 TTL
+ss1 CNAME ns2 TTL
+ss2 CNAME ns3 TTL
+mail1 CNAME mx1 TTL

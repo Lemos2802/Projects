@@ -1,0 +1,8 @@
+# config SP do bug.ptg.
+bug.ptg DB ./BD/DNS_DB_bug.txt 
+bug.ptg SS 10.2.2.12:5353
+#bug.ptg SS 10.1.1.11:5353
+bug.ptg DD 127.0.0.1
+bug.ptg LG ./var/dns/bug-ptg.txt
+all LG ./log/all-log.txt
+root ST ./BD/DNS_DB_ptg.txt

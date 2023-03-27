@@ -1,0 +1,6 @@
+# config SS2 do Togi.bug.ptg.
+togi.bug.ptg SP 10.1.1.12:5353
+togi.bug.ptg DD 127.0.0.1
+togi.bug.ptg LG /var/dns/togi-ptg.txt
+all LG ./log/all-log.txt
+root ST ./BD/DNS_DB_ptg.txt 

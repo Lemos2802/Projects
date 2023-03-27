@@ -1,0 +1,75 @@
+
+<div class="modal fade" id="addfeira" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#3C3C3C;">
+                <h1 class="modal-title fs-5 text-white">Adicionar feira</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="background-color:#3C3C3C;">
+                <form>
+                    <div class="d-flex form-group p-3 text-white">
+                        <span class="d-flex justify-content-center w-25">Nome: </span>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="d-flex form-group p-3 text-white">
+                        <span class="d-flex justify-content-center w-25">Distrito: </span>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="d-flex form-group p-3 text-white">
+                        <span class="d-flex justify-content-center w-25">Concelho: </span>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="d-flex form-group p-3 text-white">
+                        <span class="d-flex justify-content-center w-25">Imagem: </span>
+                        <input type="text" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer d-flex justify-content-center" style="background-color:#3C3C3C;">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <p class="miriam fs-2">Página de Administrador</p>
+    <p class="fs-3">Vendedores a ser Aprovados</p>
+    <div class="w-50 mb-2" style="background-color:#8EA7C4;">
+        <fieldset disabled>
+            <div class="d-flex form-group p-3 text-white">
+                <span class="d-flex justify-content-center w-25">Nome: </span>
+                <input type="text" class="form-control" placeholder="Acácia Silva">
+            </div>
+            <div class="d-flex form-group p-3 text-white">
+                <span class="d-flex justify-content-center w-25">Telemóvel: </span>
+                <input type="text" class="form-control" placeholder="969655123">
+            </div>
+            <div class="d-flex form-group p-3 text-white">
+                <span class="d-flex justify-content-center w-25">E-mail: </span>
+                <input type="text" class="form-control" placeholder="acaciasilva50@sapo.pt">
+            </div>
+            <div class="d-flex form-group p-3 text-white">
+                <span class="d-flex justify-content-center w-25">Nº CC: </span>
+                <input type="text" class="form-control" placeholder="987654321 0 ZZ4">
+            </div>
+            <div class="d-flex form-group p-3 text-white">
+                <span class="d-flex justify-content-center w-25">NIF: </span>
+                <input type="text" class="form-control" placeholder="123456789">
+            </div>
+        </fieldset>
+        <div class="d-flex justify-content-evenly p-3">
+            <button type="button" class="btn btn-danger">Não Aprovar</button>
+            <button type="button" class="btn btn-success">Aprovar</button>
+        </div>
+    </div>
+    <p class="fs-3 mt-4">Criar Feiras</p>
+    <div class="w-50 p-3" style="background-color:#8EA7C4;">
+        <p class="ms-3">Há 12 pedidos de feiras para a feira de Braga</p>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addfeira">Adicionar Feira</button>
+        </div>
+    </div>
+</div>

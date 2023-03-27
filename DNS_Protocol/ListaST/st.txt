@@ -1,0 +1,3 @@
+# Ficheiro que contem a lista de servidores de topo (.ptg) da nossa topologia
+10.2.2.10
+10.3.3.13

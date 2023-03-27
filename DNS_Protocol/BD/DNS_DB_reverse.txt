@@ -1,0 +1,19 @@
+# DNS database file for domain ip.in-address.reverse.
+# It also includes a pointer to the primary server
+
+@ DEFAULT inaddress.reverse.
+TTL DEFAULT 3600 
+@ SOASP ns1.inaddress.reverse. TTL
+@ SOAADMIN dnsreverse\.admin.inaddress.reverse. TTL
+@ SOASERIAL 123456789 TTL
+@ SOAREFRESH 14400 TTL
+@ SOARETRY 3600 TTL
+@ SOAEXPIRE 604800 TTL
+
+10.4.4.1 PTR cliente1 TTL
+10.4.4.20 PTR cliente2 TTL
+ 
+10.0.13.11 PTR MX-togi TTL
+10.0.12.10 PTR MX-tosta TTL
+10.0.13.13 PTR MX-Xadrez TTL
+10.0.12.12 PTR MX-bug TTL

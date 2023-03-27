@@ -1,0 +1,29 @@
+.input-icons i {
+  position: absolute;
+}
+
+.icon {
+  padding: 10px;
+  min-width: 40px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.background-header {
+  background-color: #3359A3;
+}
+
+.bd-search {
+  width: 280px;
+  margin-left: -140px;
+}
+
+.DocSearch-Form {
+  align-items: center;
+  display: flex;
+  width: 50%;
+}

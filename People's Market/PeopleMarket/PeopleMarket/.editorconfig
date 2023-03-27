@@ -1,0 +1,14 @@
+
+root = true
+
+[*.cs]
+indent_size = 4
+indent_style = space
+
+[*.{cshtml, js}]
+indent_size = 4
+indent_style = space
+
+[*.css]
+indent_size = 2
+indent_style = space

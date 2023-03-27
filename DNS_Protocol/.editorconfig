@@ -1,0 +1,10 @@
+# ficheiro de configuracao para ajudar a manter a concordancia e estilo de programacao ao longo de todo o projeto
+
+# ficheiro de root
+root = true
+
+# estilo de programacao em ficheiros python
+[*.py]
+indent_size = 4
+indent_style = space
+insert_final_newline = true

@@ -1,0 +1,18 @@
+.container-perfil{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  min-height: 78vh;
+}
+
+.w-60{
+  width: 60%;
+}
+
+.cinza {
+  color: #4D5970;
+}
+
+.cinza-claro {
+  background-color: #8EA7C4;
+}

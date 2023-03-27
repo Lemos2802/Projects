@@ -1,0 +1,8 @@
+# config SP do tosta.xadrez.ptg 
+tosta.xadrez.ptg DB ./BD/DNS_DB_tosta.txt 
+tosta.xadrez.ptg SS 10.1.1.13:5353
+#tosta.xadrez.ptg SS 10.4.4.12:5353
+tosta.xadrez.ptg DD 127.0.0.1
+tosta.xadrez.ptg LG ./var/dns/tosta-ptg.txt
+all LG ./log/all-log.txt
+root ST ./BD/DNS_DB_ptg.txt

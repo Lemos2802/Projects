@@ -1,0 +1,8 @@
+# config SP do Togi.bug.ptg.
+togi.bug.ptg DB ./BD/DNS_DB_xadrez.txt 
+togi.bug.ptg SS 10.2.2.13:5353
+#togi.bug.ptg SS 10.4.4.11:5353
+togi.bug.ptg DD 127.0.0.1
+togi.bug.ptg LG ./var/dns/togi-ptg.txt
+all LG ./log/all-log.txt
+root ST ./BD/DNS_DB_ptg.txt 

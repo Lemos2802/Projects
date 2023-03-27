@@ -1,0 +1,26 @@
+.container-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 78vh;
+}
+
+.w-70{
+  width: 70%;
+}
+
+.background-login-left{
+  background-color:#DAE0EB;
+}
+
+.background-login-right{
+  background-color: #8fa7c5;
+}
+
+.azul {
+  color: #3359A2;
+}
+
+.cinza {
+  color: #4D5970;
+}

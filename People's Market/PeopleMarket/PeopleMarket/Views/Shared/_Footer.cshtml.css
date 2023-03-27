@@ -1,0 +1,15 @@
+.footer {
+  background-color: rgba(51.47812530398369, 89.24679905176163, 162.56249696016312, 1);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 40px;
+}
+
+.w-a {
+  width: 160px !important;
+}
+
+.whitecolor {
+  color: rgba(255, 255, 255, 1);
+}

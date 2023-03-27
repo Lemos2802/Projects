@@ -1,0 +1,35 @@
+# DNS database para o servidor ROOT (.)
+# Inclui um pointer para 
+# os TLD
+
+@ DEFAULT ptg.
+TTL DEFAULT 86400
+
+@ SOASP ns1.ptg. TTL
+@ SOAADMIN dns\.admin.ptg. TTL
+@ SOASERIAL 1 TTL
+@ SOAREFRESH 14400 TTL
+@ SOARETRY 3600 TTL
+@ SOAEXPIRE 604800 TTL
+
+@ NS ns1.ptg. TTL
+@ NS ns2.ptg. TTL
+
+bug.@ NS ns1.bug.ptg.
+bug.@ NS ns2.bug.ptg.
+bug.@ NS ns3.bug.ptg.
+xadrez.@ NS ns1.xadrez.ptg.
+xadrez.@ NS ns2.xadrez.ptg.
+xadrez.@ NS ns3.xadrez.ptg.
+
+ns1 A 10.2.2.10 TTL
+ns2 A 10.3.3.10 TTL
+ns1.bug A 10.3.3.11 TTL
+ns2.bug A 10.2.2.12 TTL
+ns3.bug A 10.1.1.11 TTL
+ns1.xadrez A 10.2.2.11 TTL
+ns2.xadrez A 10.1.1.10 TTL
+ns3.xadrez A 10.3.3.12 TTL
+
+sp CNAME ns1 TTL
+sp2 CNAME ns2 TTL

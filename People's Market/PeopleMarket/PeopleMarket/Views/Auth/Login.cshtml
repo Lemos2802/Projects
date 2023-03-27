@@ -1,0 +1,25 @@
+@model LoginViewModel
+
+<div class="container-login">
+    <div class="d-flex w-70">
+        <div class="col-md background-login-left d-flex justify-content-center align-items-center flex-column">
+            <div class="fs-1 major azul">People's</div>
+            <div class="fs-1 major azul">Market</div>
+        </div>
+        <div class="col-md background-login-right">
+            <h3 class="p-4 d-flex justify-content-center miriam cinza">Login</h3>  
+            <form class="sign-in-form" asp-controller="Auth" asp-action="Login" method="post">
+                <div class="form-group p-3">
+                    <input class="form-control rounded-pill" placeholder="Nome de Utilizador" asp-for="Username"/>
+                </div>
+                <div class="form-group p-3">
+                    <input class="form-control rounded-pill" placeholder="Palavra-passe" asp-for="Password" />
+                </div>
+                <div class="form-group p-3 d-flex justify-content-evenly flex-row align-items-center">
+                    <div class="d-flex align-items-center"><button type="submit" value="Login" class="btn btn-primary">Sign in</div>
+                    <div class="d-flex align-items-center" ><a style="text-decoration:none" asp-controller="Auth" asp-action="Register">Sign up</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

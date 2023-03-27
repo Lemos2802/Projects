@@ -1,0 +1,6 @@
+# config SS2 do xadrez.ptg.
+xadrez.ptg SP 10.2.2.11:5353
+xadrez.ptg DD 127.0.0.1
+xadrez.ptg LG ./var/dns/xadrez-ptg.txt
+all LG ./log/all-log.txt
+root ST ./DB/DNS_DB_ptg.txt

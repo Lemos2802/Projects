@@ -1,0 +1,52 @@
+@model RegisterViewModel
+
+<div class="container-register">
+    <div class="d-flex w-70">
+        <div  class="col-md painelesq d-flex justify-content-center align-items-center flex-column">
+            <span  class="fs-1 logo major">People’s</span>
+            <span  class="fs-1 logo major">Market</span>
+        </div>
+        <div  class="col-md paineldir">
+            <span  class="miriam fs-1 cinza d-flex justify-content-center p-3">Registar-se</span>
+            <form class="sign-in-form" asp-controller="Auth" asp-action="Register" method="post">
+                <div class="form-group p-1">
+                    <input class="form-control rounded-pill" placeholder="Nome de utilizador" asp-for="Username" required=True />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+                <div class="form-group p-1">
+                    <input class="form-control rounded-pill" placeholder="E-mail" asp-for="Email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group p-1">
+                    <input class="form-control rounded-pill" placeholder="Palavra-passe" asp-for="Password" required=True/>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group p-1">
+                    <input class="form-control rounded-pill" placeholder="Confirmar Palavra-passe" asp-for="ConfirmPassword" required=True/>
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <div class="form-group p-1">
+                    <input class="form-control rounded-pill" placeholder="Nº de telemóvel" asp-for="PhoneNumber" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group p-1">
+                    <input class="form-control rounded-pill" placeholder="Primeiro e Último Nome" asp-for="NomeCompleto" required=True/>
+                    <span asp-validation-for="NomeCompleto" class="text-danger"></span>
+                </div>
+                <div class="form-group p-1">
+                    <input class="form-control rounded-pill" placeholder="Morada" asp-for="Morada" />
+                    <span class="text-danger"></span>
+                </div>
+                <div class="form-group p-1 d-flex justify-content-evenly flex-row align-items-center">
+                    <div class="d-flex align-items-center"><button type="submit" value="Sign up" class="btn btn-primary">Sign up</div>
+                    <a  style="text-decoration:none" asp-controller="Auth" asp-action="Login">Já é utilizador?</a>
+                </div>
+                <a  class="d-flex justify-content-center p-3" style="text-decoration:none" asp-controller="Auth" asp-action="RegisterFeirante">Gostaria de me inscrever como feirante</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
